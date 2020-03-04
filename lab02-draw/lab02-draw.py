@@ -69,6 +69,7 @@ def on_draw(delta_time):
 
 
     luna(on_draw.luna_x)
+<<<<<<< HEAD
     on_draw.luna_x +=5
 
     coche(on_draw.coche_x)
@@ -81,6 +82,23 @@ def on_draw(delta_time):
     if on_draw.luna_x>880:
         iniciarluna()
         on_draw.luna_x=-300
+=======
+    on_draw.luna_x +=1
+
+    coche(on_draw.coche_x)
+    on_draw.coche_x += 1
+
+    if on_draw.coche_x>800:
+        iniciar()
+        on_draw.coche_x=1
+
+
+
+
+
+
+
+>>>>>>> 63e6b196c565f60e5f5ee286491906eaf39ad9b4
 
 on_draw.coche_x=1
 on_draw.luna_x=1
