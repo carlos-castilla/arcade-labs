@@ -1,4 +1,7 @@
 import random
+import arcade
+
+arcade.open_window(800, 600, "Camel")
 
 def main():
 
@@ -20,10 +23,11 @@ def main():
         print ("C. Ahead full speed.")
         print ("D. Stop for the night.")
         print ("E. Status check.")
-        print ("Q. Quit")
+        print ("Q. Quit\n", " ")
 
         respuesta=input("What is your choice? ")
 
+        print (" ")
 
 # ------------------------------THIRST---------------------------------------------#
         if thirst > 4 and thirst < 7: print ("You are thirsty")
@@ -68,25 +72,33 @@ def main():
             print ("THE END")
 
         elif respuesta.upper() == "E":
+            print("-------------------------------------------------------------")
             print ("Miles: " , miles)
             print ("Canteen: " , canteen)
             print ("The natives are ", miles-natives , " miles behind you.")
+            print("-------------------------------------------------------------")
 
         elif respuesta.upper() == "D":
             tire=0
+            print("-------------------------------------------------------------")
             print ("The camel is happy")
+            print("-------------------------------------------------------------")
             natives+=random.randint(7,14)
 
         elif respuesta.upper() == "C":
             miles+=random.randint(10,20)
+            print("-------------------------------------------------------------")
             print("Total miles: ", miles)
+            print("-------------------------------------------------------------")
             thirst+=1
             tire+=random.randint(1,3)
             natives+=random.randint(7,14)
 
         elif respuesta.upper() == "B":
             miles+=random.randint(5,12)
+            print("-------------------------------------------------------------")
             print ("Total miles: ", miles)
+            print("-------------------------------------------------------------")
             thirst+=1
             tire+=1
             natives+=random.randint(7,14)
@@ -95,7 +107,11 @@ def main():
             if canteen!=0:
                 canteen-=1
                 thirst=0
+                print("-------------------------------------------------------------")
                 print ("Thirst set to 0")
+                print("-------------------------------------------------------------")
             else: print ("No drinks left")
+
+        print(" ")
 
 main()
